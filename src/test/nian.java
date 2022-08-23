@@ -1,3 +1,5 @@
+package test;
+
 public class nian {
     public static void main(String[] args) {
         int a = 1000;

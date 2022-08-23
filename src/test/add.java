@@ -1,3 +1,5 @@
+package test;
+
 public class add {
     public static void main(String[] args) {
         int b = 0;
