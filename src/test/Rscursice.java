@@ -36,22 +36,30 @@ public class Rscursice {
         return print(n % num);
     }
     //写一个递归方法，输入一个非负整数，返回组成它的数字之和
+//    public static int make(int n){//1234 = 1000 + 200 + 30 + 4
+//        int temp = 0;
+//        for(int i = 1;n / i != 0;i *= 10){
+//            temp++;
+//        }
+//        int num = 1;
+//        for(int i = 1;i < temp;i++){
+//            num *= 10;
+//        }
+//        int a = n / num;
+//        if(n < 10){
+//            System.out.print(n * num);
+//            return 0;
+//        }
+//        System.out.print( a * num + "+" );
+//        return make(n % num);
+//    }
     public static int make(int n){
-        int temp = 0;
-        for(int i = 1;n / i != 0;i *= 10){
-            temp++;
-        }
-        int num = 1;
-        for(int i = 1;i < temp;i++){
-            num *= 10;
-        }
-        int a = n / num;
         if(n < 10){
-            System.out.print(n * num);
-            return 0;
+            return n;
         }
-        System.out.print( a * num + "+" );
-        return make(n % num);
+        int sum = 0;
+        sum += n % 10;
+        return sum + make(n / 10);
     }
     public static void main(String[] args) {
         int num = test1(6);
@@ -61,6 +69,7 @@ public class Rscursice {
         num = add(10);
         System.out.println(num);
         print(1234);
-        make(1234);
+      System.out.println(make(1235));
+
     }
 }
