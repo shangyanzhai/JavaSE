@@ -44,13 +44,13 @@ public class Rscursice {
      */
     public static void print(int n){
         if(n < 10){
-            System.out.println(n);
+            System.out.print(n + " ");
             return;
         }
         //在此刻 ，n >= 10是成立的，但是任然要最后一个输出各位，而这个函数正好是我自身在写的函数
         print(n / 10);
-        System.out.println(n % 10 + " ");
-        return ;
+        System.out.print(n % 10 + " ");
+        return;
     }
     //解法2
 //    public static int print(int n){
@@ -109,7 +109,7 @@ public class Rscursice {
         num = add(10);
         System.out.println(num);
         print(1234);
-      System.out.println(make(1235));
+        System.out.println(make(1235));
 
     }
 }
