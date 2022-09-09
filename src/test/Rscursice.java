@@ -1,18 +1,35 @@
 package test;
 
 public class Rscursice {
+    /**
+     * 斐波那契数列
+     * @param n
+     * @return
+     */
     public static int test1(int n ){
         if((n == 2)||(n == 1)){
             return 1;
         }
         return test1(n - 1) + test1(n - 2);
     }
+
+    /**
+     * 计算n的阶乘
+     * @param n
+     * @return
+     */
     public static int factorial(int n){
         if(n == 2){
             return 2;
         }
         return n * factorial(n-1);
     }
+
+    /**
+     * 计算从1 - n之间所有数之和
+     * @param n
+     * @return
+     */
     public static int add(int n){
         if(n == 1){
             return 1;
@@ -20,6 +37,11 @@ public class Rscursice {
         return n + add(n-1);
     }
     //解法1
+
+    /**
+     * 顺序打印一个非负整数的每一位
+     * @param n
+     */
     public static void print(int n){
         if(n < 10){
             System.out.println(n);
@@ -65,6 +87,12 @@ public class Rscursice {
 //        System.out.print( a * num + "+" );
 //        return make(n % num);
 //    }
+
+    /**
+     * 写一个递归方法，输入一个非负整数，返回组成它的数字之和
+     * @param n
+     * @return
+     */
     public static int make(int n){
         if(n < 10){
             return n;
