@@ -5,6 +5,9 @@ import com.sun.jmx.snmp.SnmpUnknownModelException;
 import java.util.Objects;
 import java.util.Scanner;
 
+/**
+ * 编写代码模拟三次密码输入的场景。最多能输入三次密码，密码正确，提示“登录成功”,密码错误，可以重新输入，最多输入三次。三次均错，则提示退出程序
+ */
 public class SecretCode {
     public static void main(String[] args) {
         //编写代码模拟三次密码输入的场景。最多能输入三次密码，密码正确，提示“登录成功”,密码错误，可以重新输入，最多输入三次。三次均错，则提示退出程序

@@ -5,6 +5,9 @@ import jdk.internal.org.objectweb.asm.tree.MultiANewArrayInsnNode;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * 猜数字小游戏
+ */
 public class GuessNumbers {
     public static void main(String[] args) {
         //首先生成一个随机数

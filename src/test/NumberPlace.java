@@ -2,6 +2,9 @@ package test;
 
 import java.util.Scanner;
 
+/**
+ * 打印a的每一位
+ */
 public class NumberPlace {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

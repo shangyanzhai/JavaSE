@@ -1,11 +1,16 @@
 package test;
 
+/**
+ * 写一种方法，既可以算两个整数相加也可以算三个浮点数相加
+ */
 public class Calssadd {
     public static int add(int a,int b){
-            return a + b;
+
+        return a + b;
     }
     public static double add(double a1,double b1,double c1){
-            return a1 + b1 + c1;
+
+        return a1 + b1 + c1;
     }
 
     public static void main(String[] args) {

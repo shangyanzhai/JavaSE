@@ -1,5 +1,8 @@
 package test;
 
+/**
+ * 求1-1/2+1/3...1/n之和
+ */
 public class OrderedSeries {
     public static void main(String[] args) {
         double num = 0;

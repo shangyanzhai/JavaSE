@@ -1,5 +1,8 @@
 package test;
 
+/**
+ * java中的进制表达方式
+ */
 public class BinaryChange {
     public static void main(String[] args) {
         int e = 0b10;//代表二进制数0010->2

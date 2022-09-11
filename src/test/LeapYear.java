@@ -1,5 +1,8 @@
 package test;
 
+/**
+ * 输出1000-2000之间所有的闰年
+ */
 public class LeapYear {
     public static void main(String[] args) {
         //输出1000-2000之间所有的闰年

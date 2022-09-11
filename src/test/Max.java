@@ -1,5 +1,8 @@
 package test;
 
+/**
+ * 求两个数或三个数之间的最大值
+ */
 public class Max {
     public static int Max2(int a,int b){
         return a > b ? a : b;

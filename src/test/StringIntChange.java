@@ -1,5 +1,8 @@
 package test;
 
+/**
+ * 字符串
+ */
 public class StringIntChange {
     public static void main(String[] args) {
 //        String c = b + "hello";

@@ -1,5 +1,8 @@
 package test;
 
+/**
+ * 1-100之间9的个数
+ */
 public class Calculate {
     public static void main(String[] args) {
         int num = 0;

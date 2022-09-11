@@ -1,5 +1,8 @@
 package test;
 
+/**
+ * 求两个数之间的最大公约数
+ */
 public class MaxCommon {
     public static void main(String[] args) {
         int a = 20;

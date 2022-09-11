@@ -1,5 +1,8 @@
 package test;
 
+/**
+ * 1-100和
+ */
 public class add {
     public static void main(String[] args) {
         int b = 0;

@@ -2,6 +2,9 @@ package test;
 
 import java.util.Scanner;
 
+/**
+ * 水仙花数
+ */
 public class NarcissusNumber {
     public static void main(String[] args) {
         //水仙花数 例： 153 = 1 ^ 3 + 5 ^ 3 + 3 ^ 3//限定条件是一个三位数

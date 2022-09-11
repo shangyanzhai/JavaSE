@@ -3,6 +3,11 @@ package test;
 import java.util.Scanner;
 
 public class Factorial {
+    /***
+     * 计算1-n的阶乘之和
+     * @param n
+     * @return
+     */
     public static int factorial(int n){
         int add = 0;
         for (int i = 1; i <= n ; i++) {
@@ -14,6 +19,12 @@ public class Factorial {
         }
         return add;
     }
+
+    /**
+     * 计算n的阶乘
+     * @param n
+     * @return
+     */
     public static int factorial1(int n){
         int num = 1;
         for (int j = 1; j <= n ; j++) {
