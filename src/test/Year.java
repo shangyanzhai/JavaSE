@@ -1,6 +1,6 @@
 package test;
 
-public class nian {
+public class Year {
     public static void main(String[] args) {
         int a = 1000;
         int b = 0;
