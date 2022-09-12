@@ -49,10 +49,46 @@ public class Array {
         }
         return arr;
     }
+
+    /**前提是有序数组，降序数组，升序数组均可，下面所写方法是升序数组
+     *查找数组中的元素，如果找到，则返回对应的数组下标，如果未能找到则返回-1
+     * @param
+     */
+    //第一种
+    public static int find(int[] n,int num){
+        //二分查找数字
+        int left =  0;
+        int right = n.length - 1;
+        while(left <= right){
+            int mid = left + ((right - left)>>1);//避免出现数字相加，超过了int类型的最大值//（left + right)>>1 会出现上述情况
+            if(n[mid] < num){
+                left = mid + 1;
+            }else if(n[mid] > num){
+                right = mid - 1;
+            }else{
+                return mid;
+            }
+        }
+        return -1;
+    }
+    //第二种递归思想
+    public static int find(int[] n,int left,int right,int num){
+        if(left > right){
+            return -1;
+        }
+        int mid = left + ((right - left)>>1);
+        if(n[mid] == num){
+            return mid;
+        } else if (n[mid] > num) {
+            return find(n,left,mid,num);
+        }else {
+            return find(n,mid,right,num);
+        }
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        int[] num = fiboN(n);
+        int[] num = fiboN(n);//该情况不为创建一个新的数组，他只是一个新的引用
         int b = num.length;
         /**
          * JDK中内置的将数组转化为字符串的方法
@@ -65,20 +101,25 @@ public class Array {
          * JDK中数组的拷贝
          */
         //第一种 全拷贝
-        int[] arr1 = Arrays.copyOf(fiboN(n), fiboN(n).length);
+        int[] arr1 = Arrays.copyOf(num, num.length);
         System.out.println(toString(arr1));
         //当所传的数组长度大于或小于原数组的值。
-        int[] arr2 = Arrays.copyOf(fiboN(n), fiboN(n).length - 1);//小于 从第一个数开始截取到新数组的长度
-        int[] arr3 = Arrays.copyOf(fiboN(n), fiboN(n).length + 1);//大于 超出的部分默认为默认值
+        int[] arr2 = Arrays.copyOf(num, num.length - 1);//小于 从第一个数开始截取到新数组的长度
+        int[] arr3 = Arrays.copyOf(num, num.length + 1);//大于 超出的部分默认为默认值
         System.out.println(toString(arr2));
         System.out.println(toString(arr3));
         //自身实现
-        int[] arr5 = copyof(fiboN(n));
+        int[] arr5 = copyof(num);
         System.out.println(toString(arr5));
         //
         //第二种 部分拷贝
         int[] arr4 = Arrays.copyOfRange(arr1, 1,6);//意思是从第二个元素开始到第六个元素，实际上是一个左闭右开的形式
         System.out.println(toString(arr4));
+
+//        //数组中寻找数据
+//        int c[] = new int[]{1,6,8,19,32,52,61,87,91};
+//        int d = find(c, 0,c.length-1,61);
+//        System.out.println(d);
 
 //        for (int i : num){
 //            System.out.print(i + " ");
