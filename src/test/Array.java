@@ -61,13 +61,25 @@ public class Array {
         int right = n.length - 1;
         while(left <= right){
             int mid = left + ((right - left)>>1);//避免出现数字相加，超过了int类型的最大值//（left + right)>>1 会出现上述情况
-            if(n[mid] < num){
-                left = mid + 1;
-            }else if(n[mid] > num){
-                right = mid - 1;
+            //升序
+            if(n[left] <= n[right]){//代表是升序
+                if(n[mid] < num){
+                    left = mid + 1;
+                }else if(n[mid] > num){
+                    right = mid - 1;
+                }else{
+                    return mid;
+                }
             }else{
-                return mid;
+                if(n[mid] < num){
+                    right = mid + 1;
+                }else if(n[mid] > num){
+                    left = mid - 1;
+                }else{
+                    return mid;
+                }
             }
+
         }
         return -1;
     }
@@ -83,6 +95,22 @@ public class Array {
             return find(n,left,mid,num);
         }else {
             return find(n,mid,right,num);
+        }
+    }
+
+    /**
+     * 冒泡排序
+     * @param
+     */
+    public static void bubble(int[] n){
+        for (int i = 0; i < n.length; i++) {
+            for (int j = 0; j < n.length - 1 - i; j++) {
+                if(n[j] > n[j + 1]){
+                    int tmp = n[j];
+                    n[j] = n[j + 1];
+                    n[j + 1] = tmp;
+                }
+            }
         }
     }
     public static void main(String[] args) {
@@ -116,10 +144,12 @@ public class Array {
         int[] arr4 = Arrays.copyOfRange(arr1, 1,6);//意思是从第二个元素开始到第六个元素，实际上是一个左闭右开的形式
         System.out.println(toString(arr4));
 
-//        //数组中寻找数据
-//        int c[] = new int[]{1,6,8,19,32,52,61,87,91};
-//        int d = find(c, 0,c.length-1,61);
+        //数组中寻找数据
+        int c[] = new int[]{91,87,61,52,32,19,8,6,1};
+//        int d = find(c, 52);
 //        System.out.println(d);
+        bubble(c);
+        System.out.println(toString(c));
 
 //        for (int i : num){
 //            System.out.print(i + " ");
