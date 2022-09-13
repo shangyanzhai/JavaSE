@@ -23,7 +23,7 @@ public class Array {
     /**
      * 模仿实现Arrays.toString的功能
      * @param n
-     * @return
+     * @return arr
      */
     public static String toString(int[] n){
         String arr = "";
@@ -40,7 +40,6 @@ public class Array {
 
     /**
      * 模仿实现Arrays.copyof的功能
-     * @param
      */
     public static int[] copyof(int n[]){
         int[] arr = new int[n.length];
@@ -52,7 +51,7 @@ public class Array {
 
     /**前提是有序数组，降序数组，升序数组均可，下面所写方法是升序数组
      *查找数组中的元素，如果找到，则返回对应的数组下标，如果未能找到则返回-1
-     * @param
+     * @param n,num
      */
     //第一种
     public static int find(int[] n,int num){
