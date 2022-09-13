@@ -58,10 +58,42 @@ public class Oddnumber {
             }
         }
     }
+
+    /**
+     * 方法三 双引用--思路是左边left，右边right，left一直读到为偶数为止，right一直读到为奇数为止
+     * @param n
+     */
+    public static void sequeence3(int[] n){
+        int left = 0;
+        int right = n.length -1;
+        while(left < right){
+//            if((n[left] % 2 == 0)&&(left < right)){
+//                if((n[right] % 2 != 0)&&(left < right)){
+//                    int tmp = n[left];
+//                    n[left] = n[right];
+//                    n[right] = tmp;
+//                }
+//                right--;
+//                continue;
+//            }
+//            left++;
+            while((n[left] % 2 != 0)&&(left < right)){//       内存循环依旧需要写终止条件,如果全是奇数或是全是偶数的情况下可能造成越界
+                left++;
+            }
+            while((n[right] % 2 == 0)&&(left < right)){
+                right--;
+            }
+            int tmp = n[left];
+            n[left] = n[right];
+            n[right] = tmp;
+        }
+    }
     public static void main(String[] args) {
         int n[] = new int[]{1,2,3,4,5,6};
-        sequence1(n);//此方法仅限连续的数组
+//        int n[] = new int[]{1,1,1,1,1,1};
+//        sequence1(n);//此方法仅限连续的数组
 //        sequeence2(n);
+        sequeence3(n);
         System.out.println(Arrays.toString(n));
     }
 }
