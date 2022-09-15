@@ -48,7 +48,20 @@ public class Array {
         }
         return arr;
     }
-
+    /**
+     * 如何证明数组为升序数组呢，也就是找反例，只要找到一个n[j] > n[j + 1]，则返回false 否则则返回true
+     *
+     */
+    public static boolean isAscending(int n[]) {
+        for (int i = 0; i < n.length; i++) {
+            for (int j = 0; j < n.length - i - 1; j++) {
+                if (n[j] > n[j + 1]) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
     /**前提是有序数组，降序数组，升序数组均可，下面所写方法是升序数组
      *查找数组中的元素，如果找到，则返回对应的数组下标，如果未能找到则返回-1
      * @param n,num
@@ -101,14 +114,38 @@ public class Array {
      * 冒泡排序
      * @param
      */
+//    public static void bubble(int[] n){
+//        for (int i = 0; i < n.length; i++) {
+//            for (int j = 0; j < n.length - 1 - i; j++) {
+//                if(n[j] > n[j + 1]){
+//                    int tmp = n[j];
+//                    n[j] = n[j + 1];
+//                    n[j + 1] = tmp;
+//                }
+//            }
+//        }
+//    }
+
+    /**
+     * 对冒泡排序进行优化，首先是对于无序空间只有一个元素的时候，则不需要进行判断
+     * 其次，通过引入标志位来减少循环，如果本身数组作为一个升序数组而言，则不需要进行排序了，
+     * 倘使没有发现交换，则默认代表该数组为一个升序数组
+     * @param
+     */
     public static void bubble(int[] n){
         for (int i = 0; i < n.length; i++) {
+            boolean isSwap = false;//引入标志位
             for (int j = 0; j < n.length - 1 - i; j++) {
-                if(n[j] > n[j + 1]){
+                if(n[j] > n[ j + 1 ]){
+                    isSwap = true;
                     int tmp = n[j];
                     n[j] = n[j + 1];
                     n[j + 1] = tmp;
                 }
+            }
+            //此时内存循环已经走完，在外层循环中，如果内存循环未能交换元素，则代表数组已经有序
+            if(!isSwap){
+                break;
             }
         }
     }
@@ -149,7 +186,8 @@ public class Array {
 //        System.out.println(d);
         bubble(c);
         System.out.println(toString(c));
-
+        boolean a = isAscending(c);
+        System.out.println(a);
 //        for (int i : num){
 //            System.out.print(i + " ");
 //        }
