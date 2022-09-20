@@ -5,17 +5,33 @@ package test;
  * 例： 狗
  */
 public class Dog {
-    public String Name;//成员变量
-    public String Color;
+    private String Name;//成员变量
+    private String Color;
     //构造方法，如果本身没有定义构造方法，编译后的class文件将自动创建一个无参构造，
     //当如果再文件中自身定义了构造方法，无参方法则不会出现，如果在需要使用无参构造，则需要自己定义
     //构造方法是一个没有返回值声明 + 名字同类名一样的
     public Dog(){//实际是一个无参构造方法，构造方法可以重载，所以可以有多个，参数数量不同的构造方法
 
     }
-    public Dog(String Name,String Color){//实际上是一个有参构造方法，可以通过使用this方法，从而避免出现参数使用就近原则
+
+    public Dog(String Name, String Color){//实际上是一个有参构造方法，可以通过使用this方法，从而避免出现参数使用就近原则
         this.Name = Name;
         this.Color = Color;
+    }
+    public String getName() {
+        return Name;
+    }
+
+    public String getColor() {
+        return Color;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public void setColor(String color) {
+        Color = color;
     }
     //成员方法
     public void bark(){//实际上是一个成员方法
