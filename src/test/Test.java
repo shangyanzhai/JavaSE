@@ -3,10 +3,10 @@ package test;
 /**
  * 测试类，用来测试类的使用
  */
-public class Test {
+public class Test extends Dog{
     public static void main(String[] args) {
-        Dog dog1 = new Dog();
-        dog1.setName("小黄");
-        System.out.println(dog1.getName());
+        Test test1 = new Test();
+        test1.eyes = "黄";
+        test1.mouth = "大";
     }
 }

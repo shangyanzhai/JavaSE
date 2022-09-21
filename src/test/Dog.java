@@ -4,10 +4,15 @@ package test;
  * 类的定义
  * 例： 狗
  */
-public class Dog {
+ public class Dog {
 
     private String Name;//成员变量
     private String Color;
+
+    public int age;
+    protected String eyes;
+
+    protected String mouth;
 
     public  static String living;//所有的狗都属于动物，所以living这个属性和具体的对象无关是一个类属性
 
@@ -27,21 +32,23 @@ public class Dog {
         this(Name);
         this.Color = Color;
     }
+
     public String getName() {
         return Name;
-    }
-
-    public String getColor() {
-        return Color;
     }
 
     public void setName(String name) {
         Name = name;
     }
 
+    public String getColor() {
+        return Color;
+    }
+
     public void setColor(String color) {
         Color = color;
     }
+
     //成员方法
     public void bark(){//实际上是一个成员方法
 
