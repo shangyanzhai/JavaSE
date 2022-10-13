@@ -1,4 +1,4 @@
-package test;
+package test.作业;
 
 /**
  * 写一种方法，既可以算两个整数相加也可以算三个浮点数相加

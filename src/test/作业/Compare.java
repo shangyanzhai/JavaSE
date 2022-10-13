@@ -1,4 +1,4 @@
-package test;
+package test.作业;
 
 /**
  * 写一种方法可以计算两个或三个数之间的最大值

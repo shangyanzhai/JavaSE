@@ -1,4 +1,4 @@
-package test;
+package test.作业;
 
 /**
  * 字符串

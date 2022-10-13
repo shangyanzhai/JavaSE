@@ -1,4 +1,4 @@
-package test;
+package test.作业;
 
 /**
  * 1-100之间9的个数

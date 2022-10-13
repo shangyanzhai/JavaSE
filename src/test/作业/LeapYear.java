@@ -1,4 +1,4 @@
-package test;
+package test.作业;
 
 /**
  * 输出1000-2000之间所有的闰年

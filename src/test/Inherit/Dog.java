@@ -1,4 +1,4 @@
-package test;
+package test.Inherit;
 
 /**
  * 类的定义

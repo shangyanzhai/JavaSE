@@ -1,4 +1,4 @@
-package test;
+package test.作业;
 
 /**
  * java中的进制表达方式

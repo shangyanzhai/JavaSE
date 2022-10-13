@@ -1,4 +1,4 @@
-package test;
+package test.作业;
 
 import jdk.internal.org.objectweb.asm.tree.MultiANewArrayInsnNode;
 

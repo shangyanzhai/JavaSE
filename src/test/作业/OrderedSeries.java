@@ -1,4 +1,4 @@
-package test;
+package test.作业;
 
 /**
  * 求1-1/2+1/3...1/n之和
