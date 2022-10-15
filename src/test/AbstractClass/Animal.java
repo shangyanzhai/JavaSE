@@ -12,17 +12,18 @@ package test.AbstractClass;
 public abstract class Animal {
     protected char name;
     protected int age;
+
     //构造方法
-    Animal(){
+    Animal() {
         System.out.println("正在加载构造方法");
     }
+
     //方法
-    protected final void eat(){//被final修饰的方法不能被重写，被final修饰的类不能被继承，则final不能和abstract修饰同一个方法或类时则会冲突
+    protected final void eat() {//被final修饰的方法不能被重写，被final修饰的类不能被继承，则final不能和abstract修饰同一个方法或类时则会冲突
         System.out.println(name + "正在吃食物");
     }
+
     //抽象方法
-    protected abstract void see();//抽象方法没有方法体
+    protected abstract void see();//抽象方法没有方法体，还有一类方法没有方法体，只有方法声明，native方法，本地方法
+
 }
-
-
-
