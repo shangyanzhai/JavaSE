@@ -20,7 +20,7 @@ public abstract class Animal {
 
     //方法
     protected final void eat() {//被final修饰的方法不能被重写，被final修饰的类不能被继承，则final不能和abstract修饰同一个方法或类时则会冲突
-        System.out.println(name + "正在吃食物");
+        System.out.println(this.name + "正在吃食物");
     }
 
     //抽象方法
