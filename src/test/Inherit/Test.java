@@ -2,6 +2,8 @@ package test.Inherit;
 
 import test.Inherit.Dog;
 
+import java.util.Scanner;
+
 /**
  * 测试类，用来测试类的使用
  */
@@ -10,5 +12,7 @@ public class Test extends Dog {
         Dog dog1 = new Dog();
         dog1.setName("小黄");
         System.out.println(dog1.getName());
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
     }
 }
