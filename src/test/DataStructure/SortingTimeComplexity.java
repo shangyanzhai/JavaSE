@@ -30,19 +30,19 @@ public class SortingTimeComplexity {
     public static int twopoints(int[] arr,int value){
         int left = 0;
         int right = arr.length - 1;
-        while(left <= right){
+        while(left < right){
             int median = left + (right - left) / 2;
             if(arr[median] == value){
                 return median;
             } else if (arr[median] < value) {
-                left++;
+                left = median;
             }else{
-                right--;
+                right = median;
             }
         }
-        //到这说明没找到，则报错
-        System.err.println("没有找到对应的数值");
-        return 0;
+//        //到这说明没找到，则报错
+//        System.err.println("没有找到对应的数值");
+        return -1;
     }
     public static void main(String[] args) {
 //        int[] a = {9,8,7,6,5,4,3,2,1};
@@ -55,7 +55,13 @@ public class SortingTimeComplexity {
 //        bubble(c);
 //        System.out.println(Arrays.toString(a));
 //        System.out.println(Arrays.toString(b));
+        long begin = System.currentTimeMillis();
         System.out.println(twopoints(b, 3));
-//        System.out.println(twopoints(b, -1));
+        long end = System.currentTimeMillis();
+        System.out.println(end - begin);//以ms为单位
+        begin = System.currentTimeMillis();
+        System.out.println(twopoints(b, -1));
+        end = System.currentTimeMillis();
+        System.out.println(end - begin);//以ms为单位
     }
 }
