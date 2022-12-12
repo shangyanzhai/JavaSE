@@ -1,7 +1,9 @@
 package test.DataStructure;
 
 /**
- * 包装类转化
+ * 包装类转化&比较
+ *
+ * 自动拆装箱
  */
 public class PackagingClassConversion {
     public static void main(String[] args) {
