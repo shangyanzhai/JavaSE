@@ -7,8 +7,14 @@ import org.w3c.dom.ls.LSOutput;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Locale;
-//String类上一把刀，他的对象不可变
-//因此String类的内部提供的所有涉及字符串修改的方法，都会产生新的字符串对象，并不会因此影响原字符串对象
+
+/**
+ * 字符串修改方法
+ *
+ * //String类上一把刀，他的对象不可变
+ * //因此String类的内部提供的所有涉及字符串修改的方法，都会产生新的字符串对象，并不会因此影响原字符串对象
+ */
+
 public class Strings {
     public static void main(String[] args) {
         /**

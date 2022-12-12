@@ -2,6 +2,9 @@ package test.Unusual;
 
 import java.util.Scanner;
 
+/**
+ * 异常
+ */
 public class Unuasual {
         public static void main(String[] args) {
             System.out.println("异常发生前代码");

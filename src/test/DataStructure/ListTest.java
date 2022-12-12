@@ -2,6 +2,9 @@ package test.DataStructure;
 
 import java.util.*;
 
+/**
+ * List类的测试，方法
+ */
 public class ListTest{
     public static void main(String[] args) {
         List list = new ArrayList();
@@ -33,9 +36,4 @@ public class ListTest{
         System.out.println(list.subList(1, 3));//切出区间为[1,3)的子集
 
     }
-    /**
-     * <...>闭合的尖括号 ———— Java语法中泛型付润特征
-     * 泛型分为 定义泛型（类 or 方法）和 使用泛型
-     * 现阶段，学会如何使用别人定义好的泛型类（Iterable ,Collection ,List）
-     */
 }

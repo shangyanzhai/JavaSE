@@ -1,8 +1,16 @@
 package test.String;
 
-//因此在Java中，某个场景需要反复修改字符串的内容，
-//推荐使用Java提供的StringBuilder（90%都是，线程不安全，效率高）或StringBuffer（10%需要保证线程安全的场景，线程安全）类
-//String 和 StringBuilder 之间的转换，也是值之间的相互拷贝
+/**
+ * String 反复修改字符串
+ * StringBuilder or StringBuffer
+ */
+
+/**
+ * //因此在Java中，某个场景需要反复修改字符串的内容，
+ * //推荐使用Java提供的StringBuilder（90%都是，线程不安全，效率高）或StringBuffer（10%需要保证线程安全的场景，线程安全）类
+ * //String 和 StringBuilder 之间的转换，也是值之间的相互拷贝
+ */
+
 public class StringBuilderBuffer {
     public static void main(String[] args) {
         //String-->StringBuilder对象

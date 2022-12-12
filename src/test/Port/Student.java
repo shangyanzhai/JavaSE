@@ -2,12 +2,20 @@ package test.Port;
 
 import javax.swing.event.CaretEvent;
 import javax.swing.event.CaretListener;
-//Student类实现了Comparable接口之后，就具备了可比较的能力
-//根据compareTo方法的返回值，JVM就知道哪个Student对象谁大谁小了
-//当一个类实现了Cloneabe接口，这个类就具备了可"克隆"的能力，克隆值得是对象b是根据对象a"复制"而来的，这个复制不是简单的创建两个引用指向同一个对象
-//确实产生了两个独立的对象，对象b的所有属性和行为都是完全从对象a复制而来，换句话说，对象a和对象b除了地址不同，其他都相同，这样的操作称之为"克隆"
-//实现了Cloneable接口后，啥方法也没有覆写，不报错，没有任何抽象方法的接口称之为标记接口，
-//不可省略，JVM只会识别所有带这个Cloneable接口的子类，打上可复制的标记
+
+/**
+ * 继承 接口Comparable和 接口Cloneable
+ *      具备比较大小的能力  标记接口
+ */
+
+/**
+ * //Student类实现了Comparable接口之后，就具备了可比较的能力
+ * //根据compareTo方法的返回值，JVM就知道哪个Student对象谁大谁小了
+ * //当一个类实现了Cloneabe接口，这个类就具备了可"克隆"的能力，克隆值得是对象b是根据对象a"复制"而来的，这个复制不是简单的创建两个引用指向同一个对象
+ * //确实产生了两个独立的对象，对象b的所有属性和行为都是完全从对象a复制而来，换句话说，对象a和对象b除了地址不同，其他都相同，这样的操作称之为"克隆"
+ * //实现了Cloneable接口后，啥方法也没有覆写，不报错，没有任何抽象方法的接口称之为标记接口，
+ * //不可省略，JVM只会识别所有带这个Cloneable接口的子类，打上可复制的标记
+ */
 public class Student implements Comparable,Cloneable{
     private String name;
     private int year;
