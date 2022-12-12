@@ -3,9 +3,6 @@ package test.Unusual;
 import java.util.Scanner;
 
 public class Unuasual {
-
-
-
         public static void main(String[] args) {
             System.out.println("异常发生前代码");
             //{
@@ -104,7 +101,6 @@ public class Unuasual {
             }
             System.out.println("程序正常退出");
 
-
         }
         public static int fun(){
             try{
@@ -170,7 +166,6 @@ public class Unuasual {
     }
     //用户名异常，非受查异常
     class UserNameException extends RuntimeException{
-
         public UserNameException(String msg){
             super(msg);
         }
@@ -180,6 +175,4 @@ public class Unuasual {
         public PasswordException(String msg){
             super(msg);
         }
-
-
-        }
+    }
