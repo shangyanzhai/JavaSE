@@ -5,6 +5,12 @@ import java.util.*;
 /**
  * List类的测试，方法
  */
+
+/**
+ * List(线性表)的特征：
+ * 1.线性表的元素有逻辑上的前后关系
+ * 2.每个元素都有一个唯一的位置相关联 --下标[0,size)
+ */
 public class ListTest{
     public static void main(String[] args) {
         List list = new ArrayList();
