@@ -1,4 +1,4 @@
-package test.DataStructure;
+package test.DataStructure.ArrayList;
 
 /**
  * List(线性表)的特征：
@@ -9,9 +9,6 @@ package test.DataStructure;
  * List<E>subList(int fromindex,int toIndex)//截取部分list
  */
 
-import java.util.Arrays;
-import java.util.Objects;
-
 /**
  * 顺序表： 物理上元素相连的线性表 -> 数组
  * 约束：
@@ -19,7 +16,7 @@ import java.util.Objects;
  *      array[0,size) != null
  *      array[size,array.length) == null
  */
-public class MyArrayList implements MyList{
+public class MyArrayList implements MyList {
     //定义属性
     private Long[] array; //array.length 也就是我们的容量(capacity)
     private int size;     //保存元素的个数
