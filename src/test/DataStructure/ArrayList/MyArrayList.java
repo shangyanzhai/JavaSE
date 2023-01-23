@@ -16,6 +16,17 @@ package test.DataStructure.ArrayList;
  *      array[0,size) != null
  *      array[size,array.length) == null
  */
+
+/**
+ * 逻辑：顺序表 是一个具体的线性表，在Java中，顺序表叫做ArrayList（早期版本叫做Vector），线性表叫做List
+ *      顺序表 是一个具体的事务，以 类 的方式来体现，可以实例化对象
+ *      线性表 是一种抽象的十五，以 接口 的方式来体现
+ *      表现在代码中 ： ArrayList 类 实现了（implements） List 接口
+ * 方法： 主要就是增删查改，对顺序表进行
+ *                              尾插，尾删，可以认为时间复杂度是O(1) 备注：看的是平均时间复杂度
+ *                              头插，头删，【插入删除的最坏情况】 时间复杂度是O(n)，需要将已有元素进行搬移
+ *                              中间位置插入，删除，时间复杂度是O(n)
+ */
 public class MyArrayList implements MyList {
     //定义属性
     private Long[] array; //array.length 也就是我们的容量(capacity)
