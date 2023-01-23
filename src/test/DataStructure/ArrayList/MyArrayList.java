@@ -52,14 +52,51 @@ public class MyArrayList implements MyList {
     public int size() {
         return size;
     }
+
+
+
+    /**
+     * 扩容机制：
+     * 当数组 （array）中放不下新添加得元素
+     * 1. 申请一个新的数组（新数组长度 > 老数组长度） 大约是原来得1.5倍/2倍
+     * 2.搬家：将元素从老数组复制到新数组
+     * 3.让顺序表的引用指向新数组
+     */
+    //扩容过程仅仅为了内部准备，不会对外
+    //时间复杂度O(n)
+    private void ensureCapacity(){
+        if(this.size < this.array.length){
+            return; // 此时不需要扩容
+        }
+
+        //此时需要扩容
+        //1. 申请一个新的数组（新数组长度 > 老数组长度） 大约是原来得1.5倍/2倍
+        int newlength = this.array.length * 2;
+        Long[] newarray = new Long[newlength];
+
+        //2.搬家：将元素从老数组复制到新数组
+        for (int i = 0; i < this.size; i++) {
+            newarray[i] = this.array[i];
+        }
+
+        //3.让顺序表的引用指向新数组
+        this.array = newarray;
+    }
+
+
     /**
      * 将 e 尾插到线性表中，一定返回true
      * @param e
      * @return
      */
+    //时间复杂度：数据规模是size，时间复杂度O(1)
+    //最坏情况，发生扩容的情况：O(n)
+    //我们认为扩容的发生是小概率事件
+    //平均时间复杂度是趋于：O(1)
     @Override
     public boolean add(Long e) {
-        //TODO:回头解决扩容的问题，即现在假设 capacity是足够的
+        ensureCapacity();//这个方法结束之后，至少还有一个空间可以插入
+
         //为size赋予了一个新的逻辑含义 —— 尾插时的元素的位置
         array[size] = e;
         //让元素个数 + 1
@@ -76,7 +113,8 @@ public class MyArrayList implements MyList {
      */
     @Override
     public void add(int index, Long e) {
-        //TODO:回头解决扩容的问题，即现在假设 capacity是足够的
+        ensureCapacity();//这个方法结束之后，至少还有一个空间可以插入
+
         //首先判断下标是否合法
         if(index < 0 || index > size){
             //此时下标不合法，抛出异常
