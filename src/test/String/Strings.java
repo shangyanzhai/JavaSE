@@ -1,5 +1,6 @@
 package test.String;
 
+import java.sql.SQLOutput;
 import java.util.Arrays;
 
 import org.w3c.dom.ls.LSOutput;
@@ -31,10 +32,11 @@ public class Strings {
         String str4 = String.valueOf("Hello");
         //调用字符串对象。length() =》方法，获取字符串的长度，其实是内部value数组中保存的字符个数
         //字符串中，空格也算单个字符
-        System.out.println(str1.length());
+//        System.out.println(str1.length());
+//        System.out.println(str3.length());
         //这个方法判断当前字符串对象的长度是否为0
-        System.out.println(str1.isEmpty());
-        System.out.println("hello".isEmpty());
+//        System.out.println(str1.isEmpty());
+//        System.out.println("hello".isEmpty());
 
         //题目
         //若字符串的引用为null
@@ -45,11 +47,11 @@ public class Strings {
         /**
          * 判断字符串是否为空的方法
          */
-        String str5 = null;
-        boolean ret = false;
-        if(str5 == null || str5.isEmpty()){//必须如此写，如果isEmpty()在前面，则有可能字符串为空，发生空指针异常
-            ret = true;
-        }
+//        String str5 = null;
+//        boolean ret = false;
+//        if( str5 == null|| str5.isEmpty() ){//必须如此写，如果isEmpty()在前面，则有可能字符串为空，发生空指针异常
+//            ret = true;
+//        }
 
         /**
          * 2.两个字符串对象的比较
@@ -85,22 +87,24 @@ public class Strings {
 
         //查找字符/字符串
         String str8 = "hello world";
-        System.out.println(str8.indexOf('l'));//从前往后，找到返回第一次出现，没找到返回-1
-        System.out.println(str8.indexOf('l',2));
-        System.out.println(str8.indexOf("lo") );
-        System.out.println(str8.indexOf("lo",1));
-        System.out.println(str8.lastIndexOf('l'));//从后往前
-        System.out.println(str8.lastIndexOf('l',1));
-        System.out.println(str8.lastIndexOf("lo"));
-        System.out.println(str8.lastIndexOf("lo",1));
+//        System.out.println(str8.indexOf('l'));//从前往后，找到返回第一次出现，没找到返回-1
+//        System.out.println(str8.indexOf('l',3));
+//        System.out.println(str8.indexOf("lo") );
+//        System.out.println(str8.indexOf("lo",4));
+//        System.out.println(str8.lastIndexOf('l'));//从后往前
+//        System.out.println(str8.lastIndexOf('l',1));
+//        System.out.println(str8.lastIndexOf('l',3));
+//        System.out.println(str8.lastIndexOf("lo"));
+//        System.out.println(str8.lastIndexOf("lo",3));
+//        System.out.println(str8.lastIndexOf("lo",4));
 
         /**
          * 判断字符串中是否有指定的子串，若有返回true，否则返回false
          * 经常搭配if分支语句使用
          */
-        System.out.println(str8.contains("llo"));
-        System.out.println(str8.contains("world"));
-        System.out.println(str8.contains("World"));
+//        System.out.println(str8.contains("llo"));
+//        System.out.println(str8.contains("world"));
+//        System.out.println(str8.contains("World"));
 
         /**
          * 4.字符串转化
@@ -109,8 +113,12 @@ public class Strings {
         String s1 = String.valueOf(123);
         String s2 = String.valueOf(12.3);
         //当传入的是第三方的对象时，默认调用toString方法
-//        String s3 = String.valueOf(new Student("小黄",18,01));
+        String s3 = String.valueOf(new test.Port.Student("小黄",18,01));
         String s4 = String.valueOf(false);
+//        System.out.println(s1);
+//        System.out.println(s2);
+//        System.out.println(s3);
+//        System.out.println(s4);
         //2.大小写转换,只限字母字符串，包含数字或中文没啥效果
         String s5 = "hello";
         String s6 = "HELLO";
@@ -143,23 +151,27 @@ public class Strings {
         System.out.println(Arrays.toString(arr3));
 
         //4.格式化字符串,类似与C的printf，但是支持正则表达式
+        //格式化字符串的使用和 System.out.printf 的方式一样
         String strr2 = String.format("%d-%d-%d",2022,10,20);
         System.out.println(strr2);
 
         /**
          * 5.字符串的替换
          */
+        strr1 = "hello world 123 世界";
         //替换所有的指定内容 Sting replaceAll(String regex/*想要替换的子串内容*/,String replacement/*替换后的内容*/)
         System.out.println(strr1.replaceAll("123","你好"));
         System.out.println(strr1);//字符串不可变
         System.out.println(strr1.replaceAll("l","a"));
         //替换首个内容 Sting replaceFirst(String regex/*想要替换的子串内容*/,String replacement/*替换后的内容*/)
+        System.out.println(strr1);//字符串不可变
         System.out.println(strr1.replaceFirst("l","a"));
 
         /**
          * 6.字符串拆分，讲一个字符串按照指定的格式拆分成字符串数组
          */
-        //将字符串全部拆分，能拆多少是多少，长度为拆完个数 String[] split(String regex)
+        strr1 = "hello world 123 世界";
+        //将字符串以指定的格式全部拆分，能拆多少是多少，长度为拆完个数 String[] split(String regex)
         String[] arr4 = strr1.split(" ");
         System.out.println(Arrays.toString(arr4));
         System.out.println(arr4.length);
@@ -170,11 +182,12 @@ public class Strings {
         //当调用split碰到某些特殊字符无法正确拆分时，需要用到转义字符,其中特殊字符有"｜"，"*"，"+"，都得加上\\
         //如果是"\",则得写出"\\\\"
         //例：ip
-        String strr3 = "192.168.1.1";
+        String strr3 = "192.168.1.2";
         String [] arr6 = strr3.split(".");
         System.out.println(Arrays.toString(arr6));//因为java中"."为特殊字符，无法正确拆分
         String [] arr7 = strr3.split("\\.");//使用双斜杠转义
         System.out.println(Arrays.toString(arr7));
+        //TODO:为什么此时拆分的时候，".1"都没了
         String [] arr8 = strr3.split(".1");
         System.out.println(Arrays.toString(arr8));
         String [] arr9 = strr3.split("\\.1");
@@ -183,12 +196,16 @@ public class Strings {
         /**
          * 7.字符串的截取方法
          */
+        strr1 = "hello world 123 世界";
         //从指定索引截取到结尾,从指定索引位置开始截取字符出啊结尾，保留开始字符 String substring(int beginlndex)
+        System.out.println(strr1);
         System.out.println(strr1.substring(3));
         //从指定索引截取到结尾，牵扯到区间的，都是左闭右开，不保留结束字符 String substring(int beginlndex，int endlndex)
+        System.out.println(strr1);
         System.out.println(strr1.substring(3,12));
         //问题：如何实现，传入一个字符串（只包含字母），进行首字母大写操作
         String strr4 = "student";
+        System.out.println(strr4);
         strr4 = strr4.substring(0,1).toUpperCase() + strr4.substring(1);
         System.out.println(strr4);
 
