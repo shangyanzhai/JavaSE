@@ -337,6 +337,13 @@ public class MyArrayList implements MyList {
             throw new RuntimeException();
         }
     }
+    public String toString(){
+        /**
+         * String.format 返回一个 格式化（format）后的字符串（String）
+         * 格式化字符串的使用和 System.out.printf 的方式一样
+         */
+        return String.format("%d",this.size);
+    }
     public static void main(String[] args) {
         MyArrayList myArrayList = new MyArrayList();
         检查顺序表是否合法(myArrayList);
