@@ -1,6 +1,6 @@
 package 包访问权限测试;
 
-import test.Inherit.Dog;
+import Inherit.Dog;
 
 public class Java extends Dog{
     public static void main(String[] args) {
