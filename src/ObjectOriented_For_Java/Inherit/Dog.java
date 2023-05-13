@@ -1,4 +1,4 @@
-package Inherit;
+package ObjectOriented_For_Java.Inherit;
 
 /**
  * 类的定义
@@ -13,6 +13,8 @@ package Inherit;
     protected String eyes;
 
     protected String mouth;
+
+    String animalAttribute;
 
     public  static String living;//所有的狗都属于动物，所以living这个属性和具体的对象无关是一个类属性
 

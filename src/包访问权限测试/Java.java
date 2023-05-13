@@ -1,6 +1,6 @@
 package 包访问权限测试;
 
-import Inherit.Dog;
+import ObjectOriented_For_Java.Inherit.Dog;
 
 public class Java extends Dog{
     public static void main(String[] args) {

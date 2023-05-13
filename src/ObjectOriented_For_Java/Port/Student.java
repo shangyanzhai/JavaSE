@@ -1,7 +1,4 @@
-package Port;
-
-import javax.swing.event.CaretEvent;
-import javax.swing.event.CaretListener;
+package ObjectOriented_For_Java.Port;
 
 /**
  * 继承 接口Comparable和 接口Cloneable
@@ -75,7 +72,7 @@ public class Student implements Comparable,Cloneable{
 //        std1.year = 20;
 //        std1.print();
         //
-        Port.Student[] stu1 = new Port.Student[3];
+        ObjectOriented_For_Java.Port.Student[] stu1 = new ObjectOriented_For_Java.Port.Student[3];
         stu1[0] = new Student("小黄",20,01);
         stu1[1] = new Student("小红",21,07);
         stu1[2] = new Student("小文",17,05);
