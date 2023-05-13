@@ -1,4 +1,4 @@
-package Array;
+package JavaSE.Array;
 
 /**
  * 二维数组
@@ -18,6 +18,15 @@ public class DoubleArray {
                 System.out.print(n[i][j] + " ");
             }
             System.out.println();
+        }
+
+        //for-each 表达式遍历二维数组
+        for(int[] i : n)
+        {
+            for(int j : i)
+            {
+                System.out.println(j);
+            }
         }
     }
 }
